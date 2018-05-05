@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int n;
+    Node *pNext;
+    Node(int input) : n(input), pNext(NULL) {}
+};
+
+Node* initList(Node **pHead) {
+    for (int i = 5; i >= 1; i--) {
+        Node *newNode = new Node(i);
+        newNode->pNext = *pHead;
+        *pHead = newNode;
+    }
+    return *pHead;
+}
+
+void printList(Node *pHead) {
+    while(pHead) {
+        cout << pHead->n << endl;
+        pHead = pHead->pNext;
+    }
+}
+
+void deleteList(Node *pHead) {
+    while(pHead) {
+        Node *tmp = pHead->pNext;
+        delete pHead;
+        pHead = tmp;
+    }
+}
+
+Node* reverse(Node **pHead) {
+    Node *prev = NULL, *curr = *pHead;
+    while(curr) {
+        Node *preceding = curr->pNext;
+        curr->pNext = prev;
+        prev = curr;
+        curr = preceding;
+    }
+    *pHead = prev;
+    return *pHead;
+}
+
+int main() {
+    Node *pHead = NULL;
+    initList(&pHead);
+    printList(pHead);
+
+    // to reverse list
+    reverse(&pHead);
+    printList(pHead);
+
+    deleteList(pHead);
+	return 0;
+}
+
