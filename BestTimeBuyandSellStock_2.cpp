@@ -16,9 +16,11 @@ public:
 
 int main() {
     const int arr[] = {7, 1, 5, 3, 6, 4};
-    vector<int> T(arr, arr + sizeof(arr) / sizeof(arr[0]));
+    vector<int> prices(begin(arr), end(arr));
+
+    // Expected result is 7 ... 
     Solution s;
-    cout << s.maxProfit(T) << "\n";
+    cout << s.maxProfit(prices) << "\n";
     return 0;
 }
 
