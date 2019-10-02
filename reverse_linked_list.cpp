@@ -1,3 +1,20 @@
+// Source : https://leetcode.com/problems/reverse-linked-list/
+
+/* Date   : 2019-10-02  r
+ */
+
+/********************************************************************************** 
+ * 
+ * Reverse a singly linked list.
+ * 
+ * click to show more hints.
+ * 
+ * Hint:
+ * A linked list can be reversed either iteratively or recursively. Could you implement both?
+ *           
+ **********************************************************************************/
+
+
 #include <iostream>
 using namespace std;
 
@@ -44,6 +61,7 @@ Node* reverse(Node **pHead) {
 }
 
 int main() {
+    // It is better to have a picture
     Node *pHead = NULL;
     initList(&pHead);
     printList(pHead);
