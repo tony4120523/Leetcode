@@ -1,3 +1,24 @@
+// Source : https://leetcode.com/problems/single-number/
+
+/* Date   : 2020-02-27  r
+ */
+
+/********************************************************************************** 
+* 
+* Given an array of integers, every element appears twice except for one. Find that single one.
+* 
+* Note:
+* Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+* 
+* Example 1:
+* Input: [2,2,1]
+* Output: 1
+* 
+* Example 2:
+* Input: [4,1,2,1,2]
+* Output: 4
+**********************************************************************************/
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -22,6 +43,7 @@ int main() {
 
     Solution s;
     cout << s.singleNumber(nums) << endl;
+    // output: 56
     return 0;
 }
 
