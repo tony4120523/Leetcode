@@ -1,6 +1,7 @@
 // Source : https://leetcode.com/problems/jewels-and-stones/
 
 /* Date   : 2019-11-19  r
+            2020-04-09  r
  */
 
 /*************************************************************************************** 
@@ -14,21 +15,17 @@
  * 
  * Example 1:
  * 
- * 
  * Input: J = "aA", S = "aAAbbbb"
  * Output: 3
  * 
  * 
  * Example 2:
  * 
- * 
  * Input: J = "z", S = "ZZ"
  * Output: 0
  * 
  * 
  * Note:
- * 
- * 
  * 	S and J will consist of letters and have length at most 50.
  * 	The characters in J are distinct.
  ***************************************************************************************/
@@ -57,8 +54,7 @@ int main() {
     string S = "bbbAAaCCcc";
 
     Solution s;
-    cout << s.numJewelsInStones(J, S) << endl;
+    cout << s.numJewelsInStones(J, S) << endl; // result: 5
 
     return 0;
 }
-
