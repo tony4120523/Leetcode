@@ -1,3 +1,15 @@
+// Source : https://oj.leetcode.com/problems/roman-to-integer/
+/* Date   : 2020-05-18  r
+ */
+
+/********************************************************************************** 
+* 
+* Given a roman numeral, convert it to an integer.
+* 
+* Input is guaranteed to be within the range from 1 to 3999.
+*               
+**********************************************************************************/
+
 #include <iostream>
 #include <unordered_map>
 using namespace std;
@@ -6,21 +18,21 @@ using namespace std;
 class Solution {
 public:
     int romanToInt(string s) {
-        unordered_map<char, int> m = {
+        unordered_map<char, int> map = {
             {'I', 1}, 
             {'V', 5}, 
             {'X', 10}, 
             {'L', 50}, 
             {'C', 100}, 
             {'D', 500}, 
-            {'M', 1000}, 
+            {'M', 1000}
         };
-        int sum = 0;
+        int sum = map[s[s.size() - 1]];
         for (int i = s.size() - 2; i >= 0; i--) {
-            if (m[s[i]] < m[s[i + 1]]) {
-                sum -= m[s[i]];
+            if (map[s[i]] < map[s[i + 1]]) {
+                sum -= map[s[i]];
             } else {
-                sum += m[s[i]];
+                sum += map[s[i]];
             }
         }
         return sum;        
@@ -29,11 +41,13 @@ public:
 
 int main() {
     Solution s;
-    cout << s.romanToInt("III") << "\n";
-    cout << s.romanToInt("IV") << "\n";
-    cout << s.romanToInt("IX") << "\n";
-    cout << s.romanToInt("LVIII") << "\n";
+    cout << s.romanToInt("III") << " ";
+    cout << s.romanToInt("IV") << " ";
+    cout << s.romanToInt("IX") << " ";
+    cout << s.romanToInt("LVIII") << " ";
     cout << s.romanToInt("MCMXCIV") << "\n";
     return 0;
+    
+    //  result: 3 4 9 58 1994
 }
 
