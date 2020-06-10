@@ -1,6 +1,6 @@
 // Source : https://leetcode.com/problems/reverse-linked-list/
-
 /* Date   : 2019-10-02  r
+            2020-06-11  r
  */
 
 /********************************************************************************** 
@@ -34,14 +34,14 @@ Node* initList(Node **pHead) {
 }
 
 void printList(Node *pHead) {
-    while(pHead) {
+    while (pHead) {
         cout << pHead->n << endl;
         pHead = pHead->pNext;
     }
 }
 
 void deleteList(Node *pHead) {
-    while(pHead) {
+    while (pHead) {
         Node *tmp = pHead->pNext;
         delete pHead;
         pHead = tmp;
@@ -50,7 +50,7 @@ void deleteList(Node *pHead) {
 
 Node* reverse(Node **pHead) {
     Node *prev = NULL, *curr = *pHead;
-    while(curr) {
+    while (curr) {
         Node *preceding = curr->pNext;
         curr->pNext = prev;
         prev = curr;
@@ -61,12 +61,15 @@ Node* reverse(Node **pHead) {
 }
 
 int main() {
-    // It is better to have a picture
+    // It's better to have a picture
+    cout << "init List" << endl;
     Node *pHead = NULL;
     initList(&pHead);
     printList(pHead);
+    cout << "- - - - - - - - - -" << endl;
 
     // to reverse list
+    cout << "reversed List" << endl;
     reverse(&pHead);
     printList(pHead);
 
