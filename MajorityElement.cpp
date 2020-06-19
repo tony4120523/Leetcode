@@ -1,6 +1,6 @@
 // Source : https://oj.leetcode.com/problems/majority-element/
-
 /* Date   : 2019-11-22  r
+            2020-06-19  r
  */
 
  /********************************************************************************** 
@@ -9,8 +9,6 @@
  * 
  * You may assume that the array is non-empty and the majority element always exist in the array.
  * 
- * Credits:Special thanks to @ts for adding this problem and creating all test cases.
- *               
  **********************************************************************************/
 
 #include <iostream>
@@ -21,8 +19,9 @@ using namespace std;
 class Solution {
 public: 
     int majorityElement(vector<int>& nums) {
-        int major = nums[0], count = 1;
-        // if this is the major or not, offset each other
+        int major = 0;
+        int count = 0;
+        
         for (int i = 0; i < (int)nums.size(); i++) {
             if (count == 0) {
                 major = nums[i];
@@ -38,7 +37,7 @@ public:
 };
 
 int main() {
-    int arr[] = {3, 3, 5, 6, 3};
+    int arr[] = {4, 5, 6, 7, 6};
     vector<int> T(arr, arr + 5);
     Solution s;
     cout << s.majorityElement(T) << "\n";
