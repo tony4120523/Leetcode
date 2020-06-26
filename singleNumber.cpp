@@ -1,6 +1,7 @@
 // Source : https://leetcode.com/problems/single-number/
 
 /* Date   : 2020-02-27  r
+ *          2020-06-26  r
  */
 
 /********************************************************************************** 
@@ -28,7 +29,8 @@ class Solution {
 public:
     // use bitwise XOR
     int singleNumber(vector<int>& nums) {
-        int i, ans = 0;
+        int i;
+        int ans = 0;
         for (i = 0; i < (int)nums.size(); i++) {
             ans ^= nums[i];
         }
