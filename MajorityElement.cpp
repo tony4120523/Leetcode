@@ -1,6 +1,7 @@
 // Source : https://oj.leetcode.com/problems/majority-element/
 /* Date   : 2019-11-22  r
-            2020-06-19  r
+ *          2020-06-19  r
+ *          2020-06-27  r
  */
 
  /********************************************************************************** 
@@ -13,7 +14,6 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm> // if use sorting
 using namespace std;
 
 class Solution {
