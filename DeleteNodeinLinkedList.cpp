@@ -1,3 +1,7 @@
+// Source : https://leetcode.com/problems/delete-node-in-a-linked-list/
+/* Date   : 2020-07-09  r
+ */
+
 #include <iostream>
 using namespace std;
 
