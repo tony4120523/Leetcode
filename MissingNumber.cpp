@@ -1,5 +1,6 @@
 // Source : https://leetcode.com/problems/missing-number/
 /* Date   : 2020-05-27  r
+ *          2020-07-13  r
  */
 
 /*************************************************************************************** 
@@ -26,7 +27,9 @@ using namespace std;
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        int xo = 0, i;
+        int xo = 0;
+        int i;
+
         for (i = 0; i < (int)nums.size(); i++) {
             xo = xo ^ i ^ nums[i];
         }
