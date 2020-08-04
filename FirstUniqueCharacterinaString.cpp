@@ -1,5 +1,6 @@
 // Source : https://leetcode.com/problems/first-unique-character-in-a-string/
 /* Date   : 2020-06-08  r
+ *          2020-08-04  r
  */
 
 /*************************************************************************************** 
