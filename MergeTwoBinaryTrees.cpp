@@ -1,6 +1,7 @@
 // Source : https://leetcode.com/problems/merge-two-binary-trees/
 /* Date   : 2020-05-06  r
  *          2020-07-12  r
+ *          2020-08-07  r
  */
 
 /*************************************************************************************** 
@@ -68,6 +69,7 @@ public:
         }
         return t1;
     }
+
     // preorder 
     void printTree(TreeNode *root) {
         if (root == NULL)  return;
