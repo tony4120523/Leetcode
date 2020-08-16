@@ -1,5 +1,6 @@
 // Source : https://leetcode.com/problems/delete-node-in-a-linked-list/
 /* Date   : 2020-07-09  r
+ *          2020-08-16  r
  */
 
 #include <iostream>
