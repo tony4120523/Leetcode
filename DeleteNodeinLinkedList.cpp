@@ -1,6 +1,7 @@
 // Source : https://leetcode.com/problems/delete-node-in-a-linked-list/
 /* Date   : 2020-07-09  r
  *          2020-08-16  r
+ *          2020-11-03  r
  */
 
 #include <iostream>
@@ -52,7 +53,7 @@ int main() {
 
     // delete node 3
     cout << "delete node 3" << "\n";
-    //
+    
     ListNode *node3 = head->next->next;
     s.deleteNode(node3);
     s.printNode(head);
