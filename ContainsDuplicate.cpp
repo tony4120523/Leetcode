@@ -38,4 +38,3 @@ int main() {
     cout << s.containsDuplicate(T) << "\n";
     return 0;
 }
-
