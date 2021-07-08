@@ -2,6 +2,7 @@
 /* Date   : 2020-07-09  r
  *          2020-08-16  r
  *          2020-11-03  r
+ *          2021-07-08  r
  */
 
 #include <iostream>
@@ -10,7 +11,6 @@ using namespace std;
 /**
  * Definition for singly-linked list.
  */
- 
 struct ListNode {
     int val;
     ListNode *next;
@@ -26,8 +26,8 @@ public:
         ListNode *tmp = node->next;
         *node = *node->next;
         delete tmp;
-
     }
+
     void initNode(ListNode **head) {
         for (int i = 4; i > 0; i--) {
             ListNode *newnode = new ListNode(i);
@@ -35,12 +35,12 @@ public:
             *head = newnode;
         }
     }
+
     void printNode(ListNode *head) {
         while (head != NULL) {
             cout << head->val << "\n";
             head = head->next;
         }
-        
     }
 };
 
@@ -53,7 +53,7 @@ int main() {
 
     // delete node 3
     cout << "delete node 3" << "\n";
-    
+
     ListNode *node3 = head->next->next;
     s.deleteNode(node3);
     s.printNode(head);
