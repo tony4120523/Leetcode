@@ -3,19 +3,20 @@
  *          2020-03-27  r
  *          2020-06-01  r
  *          2020-08-12  r
+ *          2021-07-21  r
  */
 
-/********************************************************************************** 
- * 
- * Given two strings s and t, write a function to determine if t is an anagram of s. 
- * 
+/**********************************************************************************
+ *
+ * Given two strings s and t, write a function to determine if t is an anagram of s.
+ *
  * For example,
  * s = "anagram", t = "nagaram", return true.
  * s = "rat", t = "car", return false.
- * 
+ *
  * Note:
  * You may assume the string contains only lowercase alphabets.
- *               
+ *
  **********************************************************************************/
 
 #include <iostream>
@@ -23,7 +24,7 @@
 using namespace std;
 
 class Solution {
-public: 
+public:
     bool isAnagram(string s, string t) {
         // int array for check
         unsigned int check[128] = {};
